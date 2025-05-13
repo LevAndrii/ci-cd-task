@@ -1,6 +1,7 @@
 # This is a basic workflow to help you get started with Actions
 
-name: ${{ github.actor }} GitHub Actions test
+name: CI
+run-name: ${{ github.actor }} GitHub Actions test
 
 env: 
   GITHUB_ACTIONS: true
@@ -30,6 +31,5 @@ jobs:
           echo "Repository: ${{ github.repository }}"
 
       - name: Show event name
-        run: 'echo "Event: ${{ github.event_name }}"'
-            
-      
+        run: 'echo "Initiated by: ${{ github.event_name }} event"'
+        
